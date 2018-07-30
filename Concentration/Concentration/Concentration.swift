@@ -30,7 +30,24 @@ class Concentration
         }
     }
     
+    var indexOfOneAndOnlyFaceUpCard: Int?
     func chooseCard (at index: Int) {
-        
+        if !cards[index].isMatched{
+            if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
+                // check match
+                if cards[matchIndex].identifier == cards[index].identifier {
+                    cards[matchIndex].isMatched = true
+                    cards[index].isMatched = true
+                }
+                indexOfOneAndOnlyFaceUpCard = nil
+            } else {
+                // either no card or 2 cards facing up
+                for flipIndex in cards.indices {
+                    cards[flipIndex].isFaceUp = false
+                }
+                indexOfOneAndOnlyFaceUpCard = index
+            }
+            cards[index].isFaceUp = true
+        }
     }
 }

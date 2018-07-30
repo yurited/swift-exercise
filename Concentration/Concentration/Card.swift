@@ -10,7 +10,8 @@ import Foundation
 
 struct Card
 {
-    // diff
+    //
+    // difference
     // struct has no inheretance
     // struc is value type and class is reference type
     // value type copied when passed but has  copy on write semantics in swift
@@ -24,7 +25,6 @@ struct Card
     static func getUniqueIndentifier() -> Int {
         uniqueIdentifierFactory += 1
         return uniqueIdentifierFactory;
-        
     }
     
     init () {
