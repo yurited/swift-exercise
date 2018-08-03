@@ -11,12 +11,35 @@ import Foundation
 class Concentration
 {
 //    var cards = Array<Card>()
-    var cards = [Card]()
-    static func random(_ n: Int) -> Int {
+    private(set) var cards = [Card]()
+    
+    private static func random(_ n: Int) -> Int {
         return Int(arc4random_uniform(UInt32(n)))
     }
     
+    private var indexOfOneAndOnlyFaceUpCard: Int? {
+        get {
+            var foundIndex: Int?
+            for index in cards.indices {
+                if cards[index].isFaceUp {
+                    if (foundIndex == nil) {
+                        foundIndex = index
+                    } else {
+                        return nil
+                    }
+                }
+            }
+            return foundIndex
+        }
+        set { // default to newValue
+            for index in cards.indices {
+                cards[index].isFaceUp = (index == newValue)
+            }
+        }
+    }
+    
     init (numberOfPairsOfCards: Int) {
+        assert(numberOfPairsOfCards > 0, "Concentration: init(numberOfPairsOfCards: \(numberOfPairsOfCards): numberOfPairsOfCards must be larger than 0")
         for _ in 1...numberOfPairsOfCards {
             let card = Card()
 //            cards.append(card) // copy
@@ -30,8 +53,8 @@ class Concentration
         }
     }
     
-    var indexOfOneAndOnlyFaceUpCard: Int?
-    func chooseCard (at index: Int) {
+    func chooseCard(at index: Int) {
+        assert(cards.indices.contains(index), "Concentration: chooseCard(at \(index)): chose index isn't in the cards")
         if !cards[index].isMatched{
             if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
                 // check match
@@ -39,15 +62,11 @@ class Concentration
                     cards[matchIndex].isMatched = true
                     cards[index].isMatched = true
                 }
-                indexOfOneAndOnlyFaceUpCard = nil
+                cards[index].isFaceUp = true
             } else {
                 // either no card or 2 cards facing up
-                for flipIndex in cards.indices {
-                    cards[flipIndex].isFaceUp = false
-                }
                 indexOfOneAndOnlyFaceUpCard = index
             }
-            cards[index].isFaceUp = true
         }
     }
 }

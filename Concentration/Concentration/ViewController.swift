@@ -12,27 +12,34 @@ class ViewController: UIViewController {
     
     // property initializer run before self is avaliable
     // lazy can not have did set, no property observers with lazy var
-    lazy var game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
+    private lazy var game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
+    
+    private var numberOfPairsOfCards: Int {
+        get {
+            return (cardButtons.count + 1) / 2
+        }
+        // no set meaning read only
+    }
     
     // Instance Varibles = properties
-    var flipCount = 0 {
+    private(set) var flipCount = 0 {
         // Property Observer !!!
         didSet {
             flipCountLabel.text = "Flips :\(flipCount)"
         }
     }
     
-    static var emojiArray = ["🎃", "👻", "🐻", "🙃"]
+    private static let emojiArray = ["🎃", "👻", "🐻", "🙃"]
     
     lazy var emojiChoicesForGame = ViewController.emojiArray;
     
-    @IBOutlet weak var flipCountLabel: UILabel!
+    @IBOutlet private weak var flipCountLabel: UILabel!
     
-    @IBOutlet var cardButtons: [UIButton]! // Array<UIButton>!
+    @IBOutlet private var cardButtons: [UIButton]! // Array<UIButton>!
     
-    @IBOutlet weak var newGameButton: UIButton!
+    @IBOutlet private weak var newGameButton: UIButton!
     
-    @IBAction func touchNewGameButton(_ sender: UIButton) {
+    @IBAction private func touchNewGameButton(_ sender: UIButton) {
         flipCount = 0
         emojiChoicesForGame = ViewController.emojiArray
         game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
@@ -40,7 +47,7 @@ class ViewController: UIViewController {
         
     }
 
-    @IBAction func touchCard(_ sender: UIButton) {
+    @IBAction private func touchCard(_ sender: UIButton) {
         flipCount += 1
         if let cardNumber = cardButtons.index(of: sender) {
             print("card number = \(cardNumber)")
@@ -52,7 +59,7 @@ class ViewController: UIViewController {
         
     }
     
-    func updateViewFromModel() {
+    private func updateViewFromModel() {
         for index in cardButtons.indices {
             let card = game.cards[index]
             let button = cardButtons[index]
@@ -66,14 +73,11 @@ class ViewController: UIViewController {
         }
     }
     
-
-    //    var emoji = Dictionary<Int,String>()
-    var emoji=[Int:String]()
+    private var emoji=[Int:String]() // var emoji = Dictionary<Int,String>()
     
-    func emoji(for card: Card) -> String {
+    private func emoji(for card: Card) -> String {
         if emoji[card.identifier] == nil, emojiChoicesForGame.count > 0 {
-            let randomIndex = Int(arc4random_uniform(UInt32(emojiChoicesForGame.count)))
-            emoji[card.identifier] = emojiChoicesForGame.remove(at: randomIndex)
+            emoji[card.identifier] = emojiChoicesForGame.remove(at: emojiChoicesForGame.count.arc4random)
         }
         return emoji[card.identifier] ?? "?"
     }
@@ -89,3 +93,15 @@ class ViewController: UIViewController {
 //    }
 }
 
+extension Int {
+    var arc4random: Int {
+        if self > 0 {
+            return Int(arc4random_uniform(UInt32(self)))
+        } else if self < 0 {
+            return -Int(arc4random_uniform(UInt32(abs(self))))
+        } else {
+            return 0
+        }
+        
+    }
+}
