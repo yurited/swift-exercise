@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ConcentrationViewController.swift
 //  Concentration
 //
 //  Created by Li Yu on 7/7/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ConcentrationViewController: UIViewController {
     
     // property initializer run before self is avaliable
     // lazy can not have did set, no property observers with lazy var
@@ -29,9 +29,10 @@ class ViewController: UIViewController {
         }
     }
     
-    private static let emojiArray = ["🎃", "👻", "🐻", "🙃"]
+    private static let emojiArray = ["🎃", "👻", "🐻", "🙃", "🐵", "😇", "🤩", "😈", "👍"]
+//    private static let emojiArray = "🎃👻🐻🙃🐵😇🤩😈👍";
     
-    lazy var emojiChoicesForGame = ViewController.emojiArray;
+    private lazy var emojiChoicesForGame = ConcentrationViewController.emojiArray;
     
     @IBOutlet private weak var flipCountLabel: UILabel!
     
@@ -41,7 +42,7 @@ class ViewController: UIViewController {
     
     @IBAction private func touchNewGameButton(_ sender: UIButton) {
         flipCount = 0
-        emojiChoicesForGame = ViewController.emojiArray
+        emojiChoicesForGame = ConcentrationViewController.emojiArray
         game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
         updateViewFromModel()
         
@@ -73,13 +74,14 @@ class ViewController: UIViewController {
         }
     }
     
-    private var emoji=[Int:String]() // var emoji = Dictionary<Int,String>()
+    private var emoji=[Card:String]() // var emoji = Dictionary<Int,String>()
     
     private func emoji(for card: Card) -> String {
-        if emoji[card.identifier] == nil, emojiChoicesForGame.count > 0 {
-            emoji[card.identifier] = emojiChoicesForGame.remove(at: emojiChoicesForGame.count.arc4random)
+        if emoji[card] == nil, emojiChoicesForGame.count > 0 {..
+            emoji[card] = emojiChoicesForGame.remove(at: emojiChoicesForGame.count.arc4random)
         }
-        return emoji[card.identifier] ?? "?"
+        
+        return emoji[card] ?? "?"
     }
     
 //    override func viewDidLoad() {

@@ -8,8 +8,16 @@
 
 import Foundation
 
-struct Card
+struct Card : Hashable
 {
+    var hashValue : Int {
+        return identifier
+    }
+    
+    static func ==(lhs: Card, rhs: Card) -> Bool {
+        return lhs.identifier == rhs.identifier
+    }
+    
     //
     // difference
     // struct has no inheretance
@@ -17,7 +25,9 @@ struct Card
     // value type copied when passed but has  copy on write semantics in swift
     //
     var isFaceUp = false
+    
     var isMatched = false
+    
     var identifier: Int
     
     private static var uniqueIdentifierFactory = 0;

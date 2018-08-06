@@ -7,29 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		603008D920F165A100C5D85D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603008D820F165A100C5D85D /* AppDelegate.swift */; };
-		603008DB20F165A100C5D85D /* ConcentrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603008DA20F165A100C5D85D /* ConcentrationViewController.swift */; };
-		603008DE20F165A100C5D85D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 603008DC20F165A100C5D85D /* Main.storyboard */; };
-		603008E020F165A200C5D85D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 603008DF20F165A200C5D85D /* Assets.xcassets */; };
-		603008E320F165A200C5D85D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 603008E120F165A200C5D85D /* LaunchScreen.storyboard */; };
-		603008EC20F17BCB00C5D85D /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603008EB20F17BCB00C5D85D /* Concentration.swift */; };
-		603008F020F17E3200C5D85D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603008EF20F17E3200C5D85D /* Card.swift */; };
+		B440C7E92117C9D90077A14B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B440C7E82117C9D90077A14B /* AppDelegate.swift */; };
+		B440C7EE2117C9D90077A14B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B440C7EC2117C9D90077A14B /* Main.storyboard */; };
+		B440C7F02117C9DA0077A14B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B440C7EF2117C9DA0077A14B /* Assets.xcassets */; };
+		B440C7F32117C9DA0077A14B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B440C7F12117C9DA0077A14B /* LaunchScreen.storyboard */; };
+		B440C7FD2117CB250077A14B /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B440C7FC2117CB250077A14B /* ImageViewController.swift */; };
+		B440C7FF2117CE780077A14B /* DemoURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B440C7FE2117CE780077A14B /* DemoURLs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		603008D520F165A100C5D85D /* Concentration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concentration.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		603008D820F165A100C5D85D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		603008DA20F165A100C5D85D /* ConcentrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationViewController.swift; sourceTree = "<group>"; };
-		603008DD20F165A100C5D85D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		603008DF20F165A200C5D85D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		603008E220F165A200C5D85D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		603008E420F165A200C5D85D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		603008EB20F17BCB00C5D85D /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
-		603008EF20F17E3200C5D85D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		B440C7E52117C9D90077A14B /* Cassini.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cassini.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B440C7E82117C9D90077A14B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B440C7ED2117C9D90077A14B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B440C7EF2117C9DA0077A14B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B440C7F22117C9DA0077A14B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B440C7F42117C9DA0077A14B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B440C7FC2117CB250077A14B /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		B440C7FE2117CE780077A14B /* DemoURLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoURLs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		603008D220F165A100C5D85D /* Frameworks */ = {
+		B440C7E22117C9D90077A14B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,81 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		603008CC20F165A100C5D85D = {
+		B440C7DC2117C9D90077A14B = {
 			isa = PBXGroup;
 			children = (
-				603008D720F165A100C5D85D /* Concentration */,
-				603008D620F165A100C5D85D /* Products */,
+				B440C7E72117C9D90077A14B /* Cassini */,
+				B440C7E62117C9D90077A14B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		603008D620F165A100C5D85D /* Products */ = {
+		B440C7E62117C9D90077A14B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				603008D520F165A100C5D85D /* Concentration.app */,
+				B440C7E52117C9D90077A14B /* Cassini.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		603008D720F165A100C5D85D /* Concentration */ = {
+		B440C7E72117C9D90077A14B /* Cassini */ = {
 			isa = PBXGroup;
 			children = (
-				603008DA20F165A100C5D85D /* ConcentrationViewController.swift */,
-				603008DC20F165A100C5D85D /* Main.storyboard */,
-				603008EB20F17BCB00C5D85D /* Concentration.swift */,
-				603008EF20F17E3200C5D85D /* Card.swift */,
-				603008EA20F1690100C5D85D /* Supporting Files */,
-				603008E420F165A200C5D85D /* Info.plist */,
+				B440C7E82117C9D90077A14B /* AppDelegate.swift */,
+				B440C7FE2117CE780077A14B /* DemoURLs.swift */,
+				B440C7EC2117C9D90077A14B /* Main.storyboard */,
+				B440C7EF2117C9DA0077A14B /* Assets.xcassets */,
+				B440C7F12117C9DA0077A14B /* LaunchScreen.storyboard */,
+				B440C7F42117C9DA0077A14B /* Info.plist */,
+				B440C7FC2117CB250077A14B /* ImageViewController.swift */,
 			);
-			path = Concentration;
-			sourceTree = "<group>";
-		};
-		603008EA20F1690100C5D85D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				603008D820F165A100C5D85D /* AppDelegate.swift */,
-				603008DF20F165A200C5D85D /* Assets.xcassets */,
-				603008E120F165A200C5D85D /* LaunchScreen.storyboard */,
-			);
-			path = "Supporting Files";
+			path = Cassini;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		603008D420F165A100C5D85D /* Concentration */ = {
+		B440C7E42117C9D90077A14B /* Cassini */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 603008E720F165A200C5D85D /* Build configuration list for PBXNativeTarget "Concentration" */;
+			buildConfigurationList = B440C7F72117C9DA0077A14B /* Build configuration list for PBXNativeTarget "Cassini" */;
 			buildPhases = (
-				603008D120F165A100C5D85D /* Sources */,
-				603008D220F165A100C5D85D /* Frameworks */,
-				603008D320F165A100C5D85D /* Resources */,
+				B440C7E12117C9D90077A14B /* Sources */,
+				B440C7E22117C9D90077A14B /* Frameworks */,
+				B440C7E32117C9D90077A14B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Concentration;
-			productName = Concentration;
-			productReference = 603008D520F165A100C5D85D /* Concentration.app */;
+			name = Cassini;
+			productName = Cassini;
+			productReference = B440C7E52117C9D90077A14B /* Cassini.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		603008CD20F165A100C5D85D /* Project object */ = {
+		B440C7DD2117C9D90077A14B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = yuli;
+				ORGANIZATIONNAME = personal;
 				TargetAttributes = {
-					603008D420F165A100C5D85D = {
+					B440C7E42117C9D90077A14B = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
 			};
-			buildConfigurationList = 603008D020F165A100C5D85D /* Build configuration list for PBXProject "Concentration" */;
+			buildConfigurationList = B440C7E02117C9D90077A14B /* Build configuration list for PBXProject "Cassini" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,56 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 603008CC20F165A100C5D85D;
-			productRefGroup = 603008D620F165A100C5D85D /* Products */;
+			mainGroup = B440C7DC2117C9D90077A14B;
+			productRefGroup = B440C7E62117C9D90077A14B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				603008D420F165A100C5D85D /* Concentration */,
+				B440C7E42117C9D90077A14B /* Cassini */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		603008D320F165A100C5D85D /* Resources */ = {
+		B440C7E32117C9D90077A14B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				603008E320F165A200C5D85D /* LaunchScreen.storyboard in Resources */,
-				603008E020F165A200C5D85D /* Assets.xcassets in Resources */,
-				603008DE20F165A100C5D85D /* Main.storyboard in Resources */,
+				B440C7F32117C9DA0077A14B /* LaunchScreen.storyboard in Resources */,
+				B440C7F02117C9DA0077A14B /* Assets.xcassets in Resources */,
+				B440C7EE2117C9D90077A14B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		603008D120F165A100C5D85D /* Sources */ = {
+		B440C7E12117C9D90077A14B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				603008DB20F165A100C5D85D /* ConcentrationViewController.swift in Sources */,
-				603008D920F165A100C5D85D /* AppDelegate.swift in Sources */,
-				603008EC20F17BCB00C5D85D /* Concentration.swift in Sources */,
-				603008F020F17E3200C5D85D /* Card.swift in Sources */,
+				B440C7FD2117CB250077A14B /* ImageViewController.swift in Sources */,
+				B440C7E92117C9D90077A14B /* AppDelegate.swift in Sources */,
+				B440C7FF2117CE780077A14B /* DemoURLs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		603008DC20F165A100C5D85D /* Main.storyboard */ = {
+		B440C7EC2117C9D90077A14B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				603008DD20F165A100C5D85D /* Base */,
+				B440C7ED2117C9D90077A14B /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		603008E120F165A200C5D85D /* LaunchScreen.storyboard */ = {
+		B440C7F12117C9DA0077A14B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				603008E220F165A200C5D85D /* Base */,
+				B440C7F22117C9DA0077A14B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -178,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		603008E520F165A200C5D85D /* Debug */ = {
+		B440C7F52117C9DA0077A14B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -238,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		603008E620F165A200C5D85D /* Release */ = {
+		B440C7F62117C9DA0077A14B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -292,41 +280,37 @@
 			};
 			name = Release;
 		};
-		603008E820F165A200C5D85D /* Debug */ = {
+		B440C7F82117C9DA0077A14B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SZRKF3R6ZR;
-				INFOPLIST_FILE = Concentration/Info.plist;
+				INFOPLIST_FILE = Cassini/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = yuli.personal.Concentration;
+				PRODUCT_BUNDLE_IDENTIFIER = yuli.Cassini;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		603008E920F165A200C5D85D /* Release */ = {
+		B440C7F92117C9DA0077A14B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SZRKF3R6ZR;
-				INFOPLIST_FILE = Concentration/Info.plist;
+				INFOPLIST_FILE = Cassini/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = yuli.personal.Concentration;
+				PRODUCT_BUNDLE_IDENTIFIER = yuli.Cassini;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -335,25 +319,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		603008D020F165A100C5D85D /* Build configuration list for PBXProject "Concentration" */ = {
+		B440C7E02117C9D90077A14B /* Build configuration list for PBXProject "Cassini" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				603008E520F165A200C5D85D /* Debug */,
-				603008E620F165A200C5D85D /* Release */,
+				B440C7F52117C9DA0077A14B /* Debug */,
+				B440C7F62117C9DA0077A14B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		603008E720F165A200C5D85D /* Build configuration list for PBXNativeTarget "Concentration" */ = {
+		B440C7F72117C9DA0077A14B /* Build configuration list for PBXNativeTarget "Cassini" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				603008E820F165A200C5D85D /* Debug */,
-				603008E920F165A200C5D85D /* Release */,
+				B440C7F82117C9DA0077A14B /* Debug */,
+				B440C7F92117C9DA0077A14B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 603008CD20F165A100C5D85D /* Project object */;
+	rootObject = B440C7DD2117C9D90077A14B /* Project object */;
 }

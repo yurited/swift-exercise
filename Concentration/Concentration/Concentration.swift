@@ -8,10 +8,10 @@
 
 import Foundation
 
-class Concentration
+struct Concentration
 {
 //    var cards = Array<Card>()
-    private(set) var cards = [Card]()
+    private(set) var cards = [Card]() // assume writable
     
     private static func random(_ n: Int) -> Int {
         return Int(arc4random_uniform(UInt32(n)))
@@ -47,13 +47,13 @@ class Concentration
             cards += [card, card] // copy copy
         }
         // Suffle the Cards
-        for i in 0...cards.count-1 {
-            let j = i + Concentration.random(cards.count - i)
-            (cards[i], cards[j]) = (cards[j], cards[i])
-        }
+//        for i in 0...cards.count-1 {
+//            let j = i + Concentration.random(cards.count - i)
+//            (cards[i], cards[j]) = (cards[j], cards[i])
+//        }
     }
     
-    func chooseCard(at index: Int) {
+    mutating func chooseCard(at index: Int) {
         assert(cards.indices.contains(index), "Concentration: chooseCard(at \(index)): chose index isn't in the cards")
         if !cards[index].isMatched{
             if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
