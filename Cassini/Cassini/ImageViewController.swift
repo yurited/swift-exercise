@@ -10,6 +10,7 @@ import UIKit
 
 class ImageViewController: UIViewController, UIScrollViewDelegate {
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var scrollView: UIScrollView! {
         didSet {
             scrollView.minimumZoomScale = 1/25
@@ -36,7 +37,8 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         set {
             imageView.image = newValue
             imageView.sizeToFit()
-            scrollView.contentSize = imageView.frame.size
+            scrollView?.contentSize = imageView.frame.size
+            spinner?.stopAnimating()
         }
     }
     
@@ -53,18 +55,22 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
     
     private func fetchImage() {
         if let url = imageURL {
-            let urlContent = try? Data(contentsOf: url)
-            if let imageData = urlContent {
-                image = UIImage(data: imageData)
+            spinner.startAnimating()
+            DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+                let urlContent = try? Data(contentsOf: url)
+                DispatchQueue.main.async {
+                    if let imageData = urlContent, url == self?.imageURL { // checking if self?.imageURL is still this closure asked for, it means someone else changed it already
+                        self?.image = UIImage(data: imageData)
+                    }
+                }
             }
+            
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if imageURL == nil {
-            imageURL = DemoURLs.stanford
-        }
+        
     }
 
     override func didReceiveMemoryWarning() {
