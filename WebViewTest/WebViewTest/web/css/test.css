@@ -1,0 +1,20 @@
+
+
+#test1 {
+	width: 100%;
+	padding-bottom: 80%;
+}
+
+#test2 {
+	width: 100%;
+	padding-bottom: 67%;
+}
+
+@media all and (min-width: 600px) {
+   #test1 {
+		float: left;
+		width: 50%;
+		padding-bottom: 40%;
+		margin-right: 12px;
+	}
+}
